@@ -1,0 +1,667 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: Nunito, sans-serif;
+}
+@font-face {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Montserrat Italic'), local('Montserrat-Italic'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUQjIg1_i6t8kCHKm459WxRxy7mw9c.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459Wdhyzbi.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local('Montserrat Bold'), local('Montserrat-Bold'), url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_dJE3gfD_u50.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Vibes';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Vibes Regular'), local('Vibes-Regular'), url(https://fonts.gstatic.com/s/vibes/v1/QdVYSTsmIB6tmYdwFJc.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+body {
+    background-image: linear-gradient(to top right, #7f8688, #929d9e);
+    color: white;
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+    margin: 0 0;
+    position: relative;
+}
+
+header {
+    top: 0px;
+    width: 100%;
+    position: fixed;
+    height: 69px;
+    font-size: 35px;
+    z-index: 30;
+    border-bottom: 2px solid white;
+    display: flex;
+    background-color: #7f8688;
+    opacity: 90%;
+}
+
+nav {
+    width: 100%;
+    text-align: center;
+    display: flex;
+}
+
+header span {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+header a {
+    flex-grow: 1;
+    flex-shrink: 1;
+    transition: all 330ms ease-in-out;
+    text-decoration: none;
+    color: white;
+    font-family: Vibes, sans-serif;
+}
+
+a:hover {
+    color: #F3E367;
+    text-shadow: 1px 1px black;
+}
+
+.dropdownMenu {
+    position: absolute;
+    background-color: #7f8688;
+    z-index: 18;
+    height: 130px;
+    width: 300px;
+    display: none;
+    font-size: 28px;
+    right: 108px;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+}
+
+.dropdownMenu ul {
+    list-style: none;
+    padding: 0 0;
+    margin: auto 0;
+}
+
+/* start of mobile nav */
+
+.burgerBtn {
+    height: 90%;
+    font-size: 90px;
+    position: absolute;
+    color: white;
+    display: none;
+}
+
+aside {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    position: fixed;
+    right: -100vw;
+    background-color: #fff;
+    z-index: 2000;
+}
+
+aside {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    position: fixed;
+    right: -100vw;
+    background-color: white;
+    z-index: 2000;
+}
+
+.asideMargins {
+    width: 90%;
+    height: 90%;
+    position: relative;
+    margin: auto;
+    top: 1.5%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+.asideNav {
+    padding-top: 7%;
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+    font-size: 96px;
+}
+
+.asideNav {
+    text-align: right;
+}
+
+.asideNav li {
+    margin: 30px;
+}
+
+.asideNav li, .asideNav li a {
+    text-decoration: none;
+    color: black;
+}
+
+.out {
+    color: black !important;
+    left: 5px !important;
+    right: unset !important;
+}
+.navMenu {
+    display: flex;
+}
+
+ul {
+    list-style: none;
+}
+
+.navMenu li{
+    margin: auto;
+}
+
+.navMenu li a, .navAboutMe {
+    color: lightgrey;
+    text-decoration: none;
+    transition: all 400ms;
+    cursor: pointer;
+}
+
+/* end of mobile nav */
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+
+.main h1 {
+    font-family: Vibes;
+    font-size: 50px;
+    color: #F3E367;
+}
+
+.video-banner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* background: url(home_banner.jpg); */
+    /* margin-bottom: 20px; */
+}
+
+#bannerClip {
+    position: fixed;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;    
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;  
+    z-index: 1;
+    top: 0px;
+}
+
+.bannerTitle {
+    width: 100%;
+    height: 40%;
+    top: 20%;
+    text-align: center;
+    opacity: 95%;
+    z-index: 6;
+    display: flex;
+    justify-content: center;
+}
+
+.levelLogo {
+    position: relative;
+    height: 100%;
+}
+
+.bannerDesc {
+    background-color: #929d9e;
+    opacity: 90%;
+    width: 90%;
+    height: 100px;
+    z-index: 7;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+}
+
+.descriptionSect {
+    height: fit-content;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    background-color: #929d9e;
+}
+
+.generalDescCont {
+    position: relative;
+    height: 350px;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #929d9e;
+    display: flex;
+    align-items: center;
+    /* border-top: 2px solid white;
+    border-bottom: 2px solid white; */
+    /* display: none; */
+    /* left: -100%; */
+}
+
+.generalDescCont img {
+    height: 100%;
+    border-radius: 0px 40px 40px 0px;
+    position: relative;
+    left: 0px;
+    display: none;
+}
+
+.generalDesc {
+    display: none;
+}
+
+.generalDesc p {
+    margin: auto auto;
+    font-size: 25px;
+    padding: 0 10px;
+}
+
+.generalDesc h4 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.odd {
+    background-color: #7f8688;
+}
+
+.odd img{
+    border-radius: 40px 0px 0px 40px;
+}
+
+#generalDescCont1 {
+    margin-top: 0;
+}
+
+/* .holder {
+    height: 374px;
+    width: 100%;
+    position: relative;
+    display: block;
+}    */
+
+.overview {
+    /* margin-top: 20px; */
+    position: absolute;
+    background-color: #929d9e;
+    height: 900px;
+    width: 100%;
+    z-index: 8;
+    padding-top: 50px;
+}
+
+.overview h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 45px;
+    color: #F3E367;
+    margin-bottom: 10px;
+    /* z-index: 9; */
+}
+
+.overview p {
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    width: 90%;
+    padding: 20px;
+    margin: auto;
+}
+
+
+.birdsEye {
+    width: 100%;
+    height: 100%;
+    background-image: url('../resources/the_level_resized.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* overflow: scroll; */
+    position: relative;
+    z-index: 10;
+}   
+
+/* .birdsEye img {
+    width: 100%;
+} */
+
+/* .grid {
+    display: grid;
+} */
+
+.areaPoint {
+    background-image: url(../resources/zoom-2.svg);
+    height: 70px;
+    width: 70px;
+    cursor: pointer;
+    position: absolute;
+}
+
+#halfPipe {
+    right: 25%;
+    top: 43%;
+}
+
+#euroJenny {
+    right: 10%;
+    bottom: 30%;
+}
+
+#bowl {
+    top: 30%;
+    left: 40%;
+}
+
+#street {
+    left: 45%;
+    bottom: 35%;
+}
+
+#miniHalfPipeHip {
+    z-index: 11;
+    top: 50%;
+    left: 10%;
+}
+
+#stairsHipAFrame {
+    left: 40%;
+    top: 18%;
+}
+
+.popUp {
+    width: 80%;
+    background-color: #929d9e;
+    display: none;
+    top: 10%;
+    border-radius: 20px;
+    margin: auto auto;
+    z-index: 32;
+    height: 70vh;
+    /* overflow: hidden; */
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.popUpHeader {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    margin: auto;
+
+}
+
+#popUpName {
+    font-size: 35px;
+    margin: auto;
+    width: inherit;
+
+}
+
+#popUpImgCont {
+    height: 90%;
+}
+
+#popUpImg {
+    height: 100%;
+    margin: auto 0;
+    border-radius: 10px;
+}
+
+.popUp p {
+    padding: 20px;
+}
+
+.back {
+    cursor: pointer;
+    position: relative;
+    margin: auto
+    
+}
+
+footer {
+    background-color: #7f8688;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    z-index: 12;
+    position: absolute;
+}
+
+.hide {
+    display: none;
+}
+
+.gallaryGrid {
+    display: flex;
+    overflow-y: scroll;
+    flex-direction: column;
+    height: 90%;
+    padding-right: 15px;
+    padding-bottom: 20px;
+}
+
+.gallaryGrid img {
+    height: 170px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    justify-self: center;
+}
+
+/* slideshow section */
+
+/* Slideshow container */
+.slideshow-container {
+    height: 90%;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+.mySlides img{
+    border-radius: 15px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.prev {
+    left: 10%
+}
+
+.next {
+    right: 10%;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  left: 15%;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+@media screen and (orientation: portrait) {
+    .video-banner {
+        flex-direction: column;
+        height: 70vh;
+    }
+    #bannerClip {
+        height: 70vh;
+        width: unset;
+        top: 150px;
+    }
+    .generalDescCont {
+        height: 25vh;
+    }
+    .generalDescCont img {
+        height: 80%;
+    }
+    .popUp {
+        width: 95%;
+        top: 30vh;
+        height: unset;
+        position: fixed;
+        font-size: 24px;
+    }
+    .popUp p {
+        font-size: 24px;
+    }
+    header {
+        height: 150px;
+        align-items: center;
+    }
+    .burgerBtn {
+        display: inline-block;
+        right: 5px;
+    }
+    .navMenu {
+        display: none;
+    }
+    nav {
+        width: fit-content;
+        top: 0;
+        display: none;
+    }
+    .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+        flex-direction: column;
+    }
+    .gallaryGrid {
+        display: flex;
+        overflow-x: scroll;
+        flex-direction: row;
+        width: 90%;
+        padding-bottom: 20px;
+        margin: 50px auto;
+        height: unset;
+    }
+    #popUpImgCont {
+        height: unset;
+    }
+    #popUpImg {
+        width: 95%;
+        height: unset;
+    }
+    #popUpName {
+        font-size: 45px;
+    }
+    .back {
+        font-size: 35px;
+    }
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,700;1,400&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <header>
+            <nav>
+                <span><a href="/home.html">Home</a></span>
+                <span><a href="/is_level_dry.html">Is Level Dry?</a></span>
+                <span class="dropdown">
+                    <a href="" class="dropbtn">Communtity</a>
+                    <div class="dropdownMenu">
+                        <ul>
+                            <li class="splitOption">
+                                <span><a href="/local_spots.html" id="localSpot">Local Spots</a></span>
+                                <span class="uploadSpot hide"><a href="/upload_spot.html">Upload Spot</a></span>
+                            </li>
+                            <li><a href="/level_cafe.html">Cafe</a></li>
+                        </ul>
+                    </div>
+                </span>
+            </nav>
+            <span class="burgerBtn in">&#9776;</span>
+        </header>
+        <!-- Aside holding the mobile friendly nav -->
+        <aside>
+            <div class="asideMargins">
+                <span class="burgerBtn out">&#9776;</span>
+                <ul class="asideNav">
+                    <li><a href="/home.html">Home</a></li>
+                    <li><a href="/is_level_dry.html">Is Level Dry?</a></li>
+                    <li><a href="/local_spots.html" id="localSpot">Local Spots</a></li>
+                    <li><a href="/upload_spot.html">Upload Spot</a></li>
+                    <li><a href="/level_cafe.html">Cafe</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <main>
+            <div class="video-banner">
+                <video autoplay muted loop id='bannerClip'>
+                    <source src="..\resources\stock_clip.mov">
+                </video>
+                <!-- put a video of following skater around the level -->
+                <div class="bannerTitle">
+                    <img src="../resources/level_logo_left.png" alt=" The Level Logo" class="levelLogo" id="levelLogoLeft">
+                    <img src="../resources/level_logo_right.png" alt="The Level Logo" class="levelLogo" id="levelLogoRight">
+                </div>
+            </div>
+            <div class="descriptionSect">
+                <!-- as the user scrolls down make the generalDescCont appear one by one -->
+                <div class="generalDescCont" id="generalDescCont1">
+                    <!-- general descritption of the level park as an opening -->
+                    <img src="../resources/level_imgs/bowl5.JPG" alt="The Level">
+                    <div class="generalDesc">
+                        <h4>About</h4>
+                        <p>Completely refurbished by Freestyle, the Level Skate Park is a 1,400m sq. polished concrete park. 
+                        Opened in June 2013 it’s now the centre of the skate scene in Brighton and for good reason. 
+                        From begginers to enthusiasts to even professionals, The Level is the home of an accepting and 
+                        vairing community who welcomes anyone. Come down regulaly and I'm sure you'll make some friends!</p>
+                    </div>
+                </div>
+                <div class="generalDescCont odd" id="generalDescCont2">
+                    <!-- humble roots - show how level has changed, not only in the skatepark but the community and acceptance -->
+                    <div class="generalDesc">
+                        <h4>Humble Roots</h4>
+                        <p>Completely refurbished by Freestyle, the Level Skate Park is a 1,400m sq. polished concrete park. 
+                        Opened in June 2013 it’s now the centre of the skate scene in Brighton and for good reason. 
+                        From begginers to enthusiasts to even professionals, The Level is the home of an accepting and 
+                        vairing community who welcomes anyone. Come down regulaly and I'm sure you'll make some friends!</p>
+                    </div>
+                    <img src="../resources/old_level.jpg" alt="The old Level Skatepark">
+                </div>
+                <div class="generalDescCont" id=generalDescCont3>
+                    <!-- about the flood lights, when they turn off and more -->
+                    <img src="../resources/not_level.jpg" alt="Floodlights in The Level">
+                    <div class="generalDesc">
+                        <h4>Flood Lights</h4>
+                        <p>Completely refurbished by Freestyle, the Level Skate Park is a 1,400m sq. polished concrete park. 
+                        Opened in June 2013 it’s now the centre of the skate scene in Brighton and for good reason. 
+                        From begginers to enthusiasts to even professionals, The Level is the home of an accepting and 
+                        vairing community who welcomes anyone. Come down regulaly and I'm sure you'll make some friends!</p>
+                    </div>
+                </div>
+                <div class="generalDescCont odd" id="generalDescCont4">
+                    <!-- cafe and skateboard shop??? -->
+                    <div class="generalDesc">
+                        <h4>The Level Cafe</h4>
+                        <p>Completely refurbished by Freestyle, the Level Skate Park is a 1,400m sq. polished concrete park. 
+                        Opened in June 2013 it’s now the centre of the skate scene in Brighton and for good reason. 
+                        From begginers to enthusiasts to even professionals, The Level is the home of an accepting and 
+                        vairing community who welcomes anyone. Come down regulaly and I'm sure you'll make some friends!</p>
+                    </div>
+                    <img src="..\resources\level_cafe_imgs\homeDescSection.JPG" alt="The Level">
+                </div>
+            </div>
+            <div class="overview">
+                <h2>The Park</h2>
+                <p>Take a look at the park more in depth, just click on the magnifying glass on the different sections of the park.</p>
+                <div class="birdsEye">
+                    
+                    <!-- <img id="birdsEyeImg" src="resources/birds_eye/the level resized.jpg" alt="Birds eye view of the Level"/> -->
+                    <!-- <div class="grid"> -->
+                        <!-- clean up the divs -->
+                        <!-- make png images which are the right shape of the areas which i want to show, when the mouse hover overs a section, it turns slightly yellow, maybe use jquery -->
+                    <div class="areaPoint" id="halfPipe">
+
+                    </div>
+                    <!-- prototype -->
+                    <div class="popUp">
+                        <div class="popUpHeader">
+                            <h4 class="back">Back</h4>
+                            <h2 id="popUpName">The name of area</h2>
+                        </div>
+
+                        <!-- Slideshow container -->
+                        <div id="slideshow-container" class="slideshow-container">
+                            <div id="popUpImgCont"></div>
+                            <div id="gallaryGrid" class="gallaryGrid">
+    
+                            </div>
+
+                            <!-- Next and previous buttons -->
+                            <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+                        </div>
+                    </div>
+                    <!-- prototype -->
+                    <div class="areaPoint" id="euroJenny">
+
+                    </div>
+ 
+                    <div class="areaPoint" id="bowl">
+
+                    </div>
+                    <div class="areaPoint" id="street">
+
+                    </div>
+                    <div class="areaPoint" id="miniHalfPipeHip">
+
+                    </div>
+                    <div class="areaPoint" id="stairsHipAFrame">
+
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
