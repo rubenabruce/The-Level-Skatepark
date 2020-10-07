@@ -88,7 +88,11 @@ $(document).ready(() => {
         depopulateTemplate();
         depopulateComments();
         
-        let id = $(event.currentTarget)[0].id;
+
+        let id = $(event.currentTarget)[0].id - 1;
+        console.log(id)
+        console.log(window.spotsArray) 
+        
         const positionArr = window.spotsArray[id].position.split(',');
 
         populateTemplate(id);

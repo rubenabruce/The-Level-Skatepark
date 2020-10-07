@@ -91,7 +91,7 @@ a:hover {
     position: absolute;
     background-color: #7f8688;
     z-index: 18;
-    height: 130px;
+    height: 150px;
     width: 300px;
     display: none;
     font-size: 28px;
@@ -246,6 +246,7 @@ ul {
 .levelLogo {
     position: relative;
     height: 100%;
+    border-radius: 15px;
 }
 
 .bannerDesc {
@@ -301,6 +302,7 @@ ul {
 .generalDesc h4 {
     font-size: 30px;
     margin-bottom: 30px;
+    color: #F3E367;
 }
 
 .odd {
@@ -333,7 +335,6 @@ ul {
 }
 
 .overview h2 {
-    font-family: 'Montserrat', sans-serif;
     font-size: 45px;
     color: #F3E367;
     margin-bottom: 10px;

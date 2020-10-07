@@ -160,11 +160,14 @@ function round5(x)
 }
 const populateWeather = weatherArray => {
     console.log(weatherArray);
-    let startIndex = getStartIndex(weatherArray);
+    const constStartIndex = getStartIndex(weatherArray);
+    let startIndex = constStartIndex;
+
     $('.step-time th').each(function() {
         $(this).text(weatherArray[startIndex].time.substring(11,16));
         startIndex = startIndex + 1;
     })
+    startIndex = constStartIndex;
     
     // filling in precipation chance 
     $('.step-precipation td').each(function() {
@@ -172,6 +175,7 @@ const populateWeather = weatherArray => {
         startIndex = startIndex + 1;
     })
     
+    startIndex = constStartIndex;
     $('.step-symbol td').each(function() {
         const img = document.createElement('img');
         let symbolInfo = selectSymbol(weatherArray[startIndex].significantWeatherCode);
